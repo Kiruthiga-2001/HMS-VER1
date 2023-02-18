@@ -1,0 +1,105 @@
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+}
+
+.row {margin: 0 -5px;}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color:pink;
+}
+.flex-container {
+  display: flex;
+  margin-top: 10%;
+  background-color:skyblue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 8px;
+  padding: 5px;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+  <header><h1 style="text-align: center; color:VIOLET;">HOSTEL MANAGEMENT SYSTEM</h1></header>
+  <br>
+<p style="text-align: center;">The one who thinks it's a cool idea and worth it, has sure forgotten that independence comes with a price. If one doesn't still agree, you gotta try staying at a hostel</p>
+<div class="row">
+  <div class="column">
+    <div class="card">
+        <img src="images/ladieshostel.png" alt="Avatar" style="width:87%">
+      <p><b>Ladies Hostel</b></p>
+      <p>It is safe and secure place for ladies.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+        <img src="images/rooms.png" alt="Avatar" style="width:105%">
+      <p><b>Hostel room facilities</b></p>
+      <p>we provide one cot without bed</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+        <img src="images/foods.png" alt="Avatar" style="width:105%">
+      <p><b>very hygenic and delicious foods</b></p>
+      <p>Unlimited and self service.  </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+        <img src="images/wash.png" alt="Avatar" style="width:90%; ">
+      <p><b>Washing facilities in our hostel</b></p>
+      <p>provide favour to our students</p>
+    </div>
+  </div>
+</div>
+  <br>
+  <center><div class="flex-container">
+  <div>R1</div>
+  <div>R2</div>
+  <div>R3</div> 
+  <div>R4</div>
+  <div>R5</div>
+  <div>R6</div> 
+  <div>R7</div>
+  <div>R8</div>
+  <div>.</div>
+  <div>.</div>
+  <div>.</div>
+  <div>ETC</div>
+</center>
+
+</body>
+</html>
+
+
+

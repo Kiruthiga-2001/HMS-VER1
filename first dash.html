@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<head>
+
+  <title>HMS</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"  />
+  <style>
+    /* Override default style and set padding and margin to nothing */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0
+}
+
+/* White text throughout */
+
+body {
+  font-family: "lato", sans-serif;
+  color: white;
+}
+
+/* Make all link text black with no text decoration */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 25px;
+  font-weight: 300;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 30px;
+}
+/* No styling on list items */
+li {
+  list-style-type: none;
+}
+p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+/* Centers it, sets a maximum width and makes sure elements can flow past it*/
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: visible;
+}
+/* Sets background color, height and padding*/
+
+.navbar {
+  background-color:skyblue;
+  height: 70px;
+  padding: 0 30px;
+}
+/* Sets font size, reduces font-weight, adds margin and line height */
+
+.navbar h1 {
+  font-size: 30px;
+  font-weight: 300;
+  margin: 10px 0;
+  line-height: 1.2;
+  color: black;
+}
+/*create a flex */
+.navbar .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.navbar ul {
+  display: flex;
+}
+
+/* Changes the color of both links to white, adds padding between them and margin as well */
+
+.navbar a {
+  color: white;
+  padding: 9px;
+  margin: 0 10px;
+}
+/*to change the color if the cursor is touch on the text*/
+.navbar a:hover {
+  color: #ede20c;
+  border-bottom: 3px solid #9867C5;
+}
+/*design a showcase of the imgage*/
+.showcase {
+  height: 300px;
+  background-color:pink;
+}
+/* Adds margin below the text */
+.showcase p {
+  margin-bottom: 30px;
+}
+
+/* Adds a shadow below the image */
+.showcase img {
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+}
+
+/* Adds some padding on the form content */
+.showcase-form {
+  padding-left: 7px;
+}
+/*grid implementation*/
+.grid {
+  overflow: visible;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.grid-item-1,
+.grid-item-2 {
+  position: relative;
+  top: 50px;
+}
+/*create a showcase design and button design*/
+.showcase input[type='text'] {
+  padding: 10px 70px 10px 0;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  padding-left: 6px;
+}
+
+.btn {
+  border-radius: 6px;
+  padding: 12px 20px;
+  background: #9867C5;
+  border: none;
+  margin-left: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+/*change the font of the supporting text*/
+.showcase-form {
+  margin: auto;
+}
+/* Change typeface and its size */
+.little-info {
+  font-size: 15px;
+  font-family: "poppins", sans-serif;
+
+}
+/* Create a grid of three equal columns. Set a gap of 40 px between them */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+
+/* Add padding around the footer as well */
+
+footer {
+  background-color:skyblue;
+  padding: 20px 10px;
+}
+
+/* Sets all link texts to white and puts margin to the left and right */
+
+footer a {
+  color: white;
+  margin: 0 10px;
+}
+footer a:hover {
+  color: #f4e90b;
+  border-bottom: 2px solid #9867C5;
+}
+
+/*Design for Tablets and Smaller Screens*/
+/* Tablets and Under */
+
+@media(max-width: 768px) {
+  .grid,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Align all text to the center. This will move all text, including form centrally */
+
+.showcase {
+    height: auto;
+    text-align: center;
+  }
+
+/* This resets the width of the image container and adds margin space to the left */ 
+
+.image {
+    width: 600px;
+    margin-left: 80px;
+  }
+
+
+
+}
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="container flex">
+          <h1 class="logo">GRT Hostel</h1>
+            <nav>
+              <ul>
+                <li class="nav"><a class="outline" href="Slogin.html">Log in</a></li>
+                <li class="nav"><a href="rate.html" class="outline">Rate Us</a></li>
+              </ul>
+            </nav>
+        </div>
+      </div>
+      <br>
+
+      <! -- Create a showcase area in the page -->
+      <section class="showcase">
+        <div class="container">
+            <div class="grid">
+              <div class="grid-item-1">
+                <div class="showcase-text">
+                  <h1>We are providing a safety and Hygenic facilities in our hostel.</h1>
+                  <p class="supporting-text"> More than 1000 students are staying in our hostel</p>
+                </div>
+                <div class="showcase-form">
+                  <form action="">
+                </div>
+              </div>
+
+              <div class="grid-item-2">
+                <div class="image">
+                  <img  src="images/images.png" alt="hostel image"style="width:50%">
+                </div>
+              </div>
+           </div>
+        </div>
+      </section> 
+      <br><br><br><br>
+          <! -- HTML Markup for the footer section of our landing page -->
+          <footer>
+            <div class="container grid-3">
+              <div class="copyright">
+                <center><h1>Hostel Management System</h1>
+                <p>Copyright &copy; 2022</p></center>
+              </div>
+              <nav class="links">
+                <ul>
+                  <li><a  class="outline"></a></li>
+                </ul>
+              </nav>
+              <div class="profiles">
+                
+                <a href=""><em class="fab fa-twitter fa-2x"></em></a>
+                <a href=""><em class="fab fa-instagram fa-2x"></em></a>
+                <a href=""><em class="fab fa-facebook fa-2x"></em></a>
+                <a href=""><em class="fab fa-whatsapp fa-2x"></em></a>
+              </div>
+            </div>
+          </footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color:skyblue;
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background: rgba(118, 41, 169, 0.73);
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-image: linear-gradient(to top,skyblue,pink);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Page</h1>
+  <p>The one who thinks it's a cool idea and worth it, has sure forgotten that independence comes with a price. If one doesn't still agree, you gotta try staying at a hostel</p>
+</div>
+
+<h2 style="text-align:center">Our Team members</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <center><img src="images/girl.png" alt="Jane" style="width:50%"></center>
+      <div class="container">
+        <h2>DR:ARUMUGAM</h2>
+        <p class="title">principal of the college</p>
+        <p>Hearty Welcome to our Hostel</p>
+        <p>arumugam@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <center><img src="images/girl.png" alt="Mike" style="width:50%"></center>
+      <div class="container">
+        <h2>MS:JOTHI</h2>
+        <p class="title">Warden</p>
+        <p>We Start The New Life Here We Make New Friends</p>
+        <p>jothi@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <center><img src="images/girl.png" alt="John" style="width:50%"></center>
+      <div class="container">
+        <h2>MS:SIVAGAMI</h2>
+        <p class="title">Depty Warden</p>
+        <p>Hostel life is the best life,which can chenge everyone's life.</p>
+        <p>sivagami@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

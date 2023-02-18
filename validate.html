@@ -1,0 +1,152 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Reg Form</title>    
+    <style type="text/css">    
+        body{    
+  background-image: url('images/rooms.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}  
+        input[type="text"] {    
+            width: 250px;    
+        }    
+        input[type="submit"], input[type="reset"] {    
+            width: 77px;    
+            height: 27px;    
+            position: relative;left: 180px;    
+        }    
+        form{    
+            text-align: center;    
+            font-family: Calibri;    
+            font-size: 20px;    
+            border: 3px solid black;    
+            width: 600px;    
+            margin: 20px auto;    
+        }    
+        td {    
+            padding: 10px;    
+        }    
+        td:first-child {    
+            text-align: right;    
+            font-weight: bold;    
+        }    
+        td:last-child {    
+            text-align: left; 
+            }   
+    </style>    
+    <script>    
+        function validate() {    
+            var fname = document.reg_form.fname;   
+            var lname = document.reg_form.lname;    
+            var address = document.reg_form.address;    
+            var gender = document.reg_form.gender;    
+            var email = document.reg_form.email; 
+            var password = document.reg_form.password;   
+            var mobile = document.reg_form.mobile.value;  
+            var mobile = mobile.replace(/[^\d]/g, '');  
+            if( mobile.length !=10) {  
+        alert("Please enter 10 digit number")
+        return false;
+     }
+     else if((mobile.charAt(0)!=6) && (mobile.charAt(0)!=7) && (mobile.charAt(0)!=8) && (mobile.charAt(0)!=9) ){
+        alert("Please enter a Valid mobile number")
+        return false;
+
+     }
+     else if(isNaN(mobile)){
+        alert("Only number can accepted!")
+        return false;
+
+     }   
+    
+            if(!isNaN(fname.value)){
+                alert("First Name should be in Charater!");
+                return false;
+            }    
+            if(!isNaN(lname.value)){
+                alert("Last Name Should be in Character!");
+                return false;
+            }        
+            if (gender.value.length <= 0) {    
+                alert("Gender is required");    
+                gender.focus();    
+                return false;    
+            } 
+            if(password<= 5){
+                alert("invalid password");
+                return false;
+            }   
+            if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(reg_form.email.value)){
+                confirm("Register Sucessfully.....!")
+                window.location="slogin.html";
+                return false;
+            } else{
+    confirm("You have entered an invalid email Format!")
+    return (false)
+    } 
+            
+        }   
+         
+    </script>    
+</head>    
+<body>    
+    <center><h1 style="font-family:times new roman;font-size: 18px;"> DETAILS OF THE USER TO BE FILLED HERE!!!</h1></center>    
+    <hr>    
+    <form method="" action="slogin.html" name="reg_form" onsubmit="return validate()">    
+        <h2>Registration Form</h2>    
+        <table>    
+            <tr>    
+                <td><label>First Name: </label></td>    
+                <td>    
+                    <input type="text" name="fname" placeholder="First Name" required>    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Last Name: </label></td>    
+                <td>    
+                    <input type="text" name="lname" placeholder="Last Name" required>    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Address: </label></td>    
+                <td>    
+                    <input type="textarea" size="33" name="address" placeholder="Address"required>    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Gender: </label></td>    
+                <td>    
+                    <input type="radio" name="gender" value="male">Male    
+                    <input type="radio" name="gender" value="female">Female    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label for="email">Email Id: </label></td>    
+                <td>    
+                    <input type="email" name="email" placeholder="example@gmail.com" required>    
+                </td>    
+            </tr> 
+            <tr>    
+                <td><label for="password">password: </label></td>    
+                <td>    
+                    <input type="password" name="password" placeholder="enter your password" required>    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Mobile: </label></td>    
+                <td>    
+                    <input type="number" name="mobile" required>    
+                </td>    
+            </tr>      
+            <tr>   
+                <td>    
+                    <input type="submit" name="submit" value="Submit">    
+                    <input type="reset" name="reset" value="Reset">    
+                </td>    
+            </tr>             
+        </table>    
+    </form>    
+</body>    
+</html>

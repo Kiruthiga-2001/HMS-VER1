@@ -1,0 +1,158 @@
+<html>
+<head>
+<title>hostel hostel management</title>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+h4 {text-align: center;}
+body {
+  background-image: url('images/login.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+h2{
+background-color:gary;
+padding: 35px 35px;
+margin: -10px -50px;
+text-align:center;
+border-radius: 15px 10px 0 0;
+}
+hr{
+margin: 10px -50px;
+border: 0;
+border-top: 1px solid #ccc;
+margin-bottom: 40px;
+}
+div.container{
+width: 450px;
+height: 500px;
+margin:35px auto;
+font-family: "Times New Roman", Times, serif;
+}
+div.main{
+background-color:gray;
+width: 350px;
+padding: 10px 50px 25px;
+border-radius: 10px;
+font-family:"Times New Roman", Times, serif;
+float:right;
+margin-top:60px;
+}
+input[type=text],input[type=password]{
+width: 100%;
+height: 40px;
+padding: 5px;
+margin-bottom: 25px;
+margin-top: 5px;
+border: 2px solid #ccc;
+color: black;
+font-size: 16px;
+border-radius: 5px;
+}
+label{
+color: black;
+text-shadow: 0 1px 0 #fff;
+font-size: 14px;
+font-weight: bold;
+}
+center{
+font-size:32px;
+}
+.note{
+color:red;
+}
+.valid{
+color:green;
+}
+.back{
+text-decoration: none;
+border: 1px solid rgb(0, 143, 255);
+background-color: rgb(0, 214, 255);
+padding: 3px 20px;
+border-radius: 2px;
+color: black;
+}
+input[type=button]{
+font-size: 16px;
+background: linear-gradient(red 5%,red 100%);
+border: 1px solid red;
+color: black;
+font-weight: bold;
+cursor: pointer;
+width: 100%;
+border-radius: 5px;
+padding: 10px 0;
+outline:none;
+}
+input[type=button]:hover{
+background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
+}
+.join-link {
+text-decoration: none;
+font-weight: bolder;
+color: black;
+}
+.join-now{
+text-decoration: none;
+font-weight: bolder;
+color: black;
+border-radius: 12px;
+transition: .3s;
+font-weight: bolder;
+padding: .2rem;
+}
+.join-now:hover{
+background: rgba(40, 215, 235, 0.3);
+}
+</style>
+<script>
+var attempt = 3;
+function validate(){
+var gmail = document.getElementById("gmail").value;
+var password = document.getElementById("password").value;
+if(gmail ==""&& password==""){
+alert("Gmail and Password cannot be Empty!!!");
+return false;
+}
+if ( gmail == "kiru@gmail.com" && password == "Moor@123"){
+alert ("Login successfully");
+window.location = "Dashboard.html";
+return false;
+}
+if ( gmail == "admin@gmail.com" && password == "Admin@123"){
+alert ("Login successfully");
+window.location = "room.html";
+return false;
+}
+else{
+attempt --;
+alert("Given Gmail & Password does not match,Please check Again!!Remaining  "+attempt+" attempt more to login");
+if( attempt == 0){
+document.getElementById("gmail").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+</script>
+<body>
+<div class="container">
+<div class="main">
+<h2>Login Here</h2>
+<form id="form_id" method="post" name="myform">
+<label>Email :</label>
+<input type="text" name="gmail" id="gmail"/>
+<label>Password :</label>
+<input type="password" name="password" id="password"/>
+<input type="button" value="Login" id="submit" onclick="validate()"/>
+<p class="join-link">
+<a href="validate.html" class="join-now">
+Sign up
+</a>
+</p>
+</form>
+</div>
+</div>
+</body>
+</html>
